@@ -1,0 +1,39 @@
+<div class="video-control">
+  <div class="btn-group">
+    <button class="btn" (click)="videoPlay()" [disabled]="isPlayed">
+      <i class="fa fa-play"></i>
+    </button>
+    <button class="btn" (click)="videoPause()" [disabled]="!isPlayed">
+      <i class="fa fa-pause"></i>
+    </button>
+    <button class="btn" (click)="videoPlus()">
+      <i class="fa fa-plus"></i>
+    </button>
+    <button class="btn" (click)="videoMinus()">
+      <i class="fa fa-minus"></i>
+    </button>
+    <button class="btn" (click)="videoRefresh()">
+      <i class="fa fa-refresh"></i>
+    </button>
+    <button class="btn" (click)="videoToggleMute()">
+      <i
+        class="fa"
+        [ngClass]="{
+          'fa-headphones': isHeadphones,
+          'fa-volume-off': !isHeadphones
+        }"
+      ></i>
+    </button>
+    <button class="btn" (click)="videoLike()" style="text-align:right">
+      <i class="fa fa-thumbs-o-up"></i>
+      <span class="badge badge-pill badge-primary" id="likes-badge">{{likes}}</span>
+    </button>
+    <button class="btn" (click)="videoUnlike()">
+      <i class="fa fa-thumbs-o-down" style="text-align:right"></i>
+      <span class="badge badge-pill badge-primary" id="unlikes-badge">{{unlikes}}</span>
+    </button>
+  </div>
+  <div>
+    <progress value="0"></progress>
+  </div>
+</div>

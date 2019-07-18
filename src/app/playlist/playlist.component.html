@@ -1,0 +1,13 @@
+<div class="playlist">
+  <div class="playlist-rows">
+    <ul>
+      <li *ngFor="let appVideo of videos" class="playlist-row">
+        <button class="btn" (click)="playVideo(appVideo.id)">
+          <i class="fa fa-play"></i>
+        </button>
+        <span class="badge">{{ appVideo.id }}</span
+        >: {{ appVideo.title }}
+      </li>
+    </ul>
+  </div>
+</div>

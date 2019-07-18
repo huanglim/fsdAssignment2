@@ -1,0 +1,20 @@
+.playlist {
+    text-align: center;
+    /* width: 600px; */
+}
+
+li {
+    list-style: none;
+}
+
+.playlist-rows {
+    text-align: center;
+}
+
+.playlist-row:hover {
+    background-color: bisque
+}
+
+.playing {
+    background-color: cadetblue
+}
